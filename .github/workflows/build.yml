@@ -1,0 +1,23 @@
+name: Band Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check files
+        run: dir
+
+      - name: Create build report
+        run: echo Empty GitHub Actions build successful > build-report.txt
+
+      - name: Show build report
+        run: type build-report.txt
