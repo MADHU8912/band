@@ -3,7 +3,10 @@ name: Band Build
 on:
   push:
     branches:
-      - main   # change here if you want another branch
+      - main
+  pull_request:
+    branches:
+      - main   # PR targeting main
 
 jobs:
   build:
