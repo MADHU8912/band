@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Checking out source code'
+                git branch: 'dev', url: 'https://github.com/YOUR_USERNAME/empty-build-project.git'
             }
         }
 
