@@ -3,7 +3,7 @@ name: Band Build
 on:
   push:
     branches:
-      - main
+      - main   # change here if you want another branch
 
 jobs:
   build:
@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Show current branch
+        run: echo Building branch %GITHUB_REF_NAME%
 
       - name: Check files
         run: dir
